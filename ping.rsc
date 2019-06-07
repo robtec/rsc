@@ -9,7 +9,6 @@
 :global DOWNCOUNT
 
 :if ([/ping $HOST interval=1 count=$PINGCOUNT] < $PINGMINIMUM) do={
-
     :log error "ping $HOST failed, reseting $INT interface..."
     :set DOWNCOUNT ($DOWNCOUNT + 1)
     :set UPCOUNT 0
