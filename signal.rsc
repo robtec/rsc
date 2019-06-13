@@ -8,10 +8,9 @@
 :local sinr ($lteInfo->"sinr")
 
 :if ([:len $rsrp] > 0) do={
-    :put $rsrp
-    :put $rsrq
+    :local dRsrq ($rsrq / 10)
     /tool fetch http-method=post http-data="signal,site=$SITE,access=lte,type=rsrp value=$rsrp" url=$METRICSENDPOINT;
-    /tool fetch http-method=post http-data="signal,site=$SITE,access=lte,type=rsrq value=$rsrq" url=$METRICSENDPOINT;
+    /tool fetch http-method=post http-data="signal,site=$SITE,access=lte,type=rsrq value=$dRsrq" url=$METRICSENDPOINT;
     /tool fetch http-method=post http-data="signal,site=$SITE,access=lte,type=sinr value=$sinr" url=$METRICSENDPOINT;
 }
 
