@@ -17,7 +17,7 @@
     /interface enable $INT
     :log warning "$INT is now enabled"
     :set LTECYCLES ($LTECYCLES + 1)
-} else {
+} else={
     :set UPCOUNT ($UPCOUNT + 1)
     :set DOWNCOUNT 0
 }
