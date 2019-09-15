@@ -1,5 +1,5 @@
 :local METRICSENDPOINT
-:local SITE
+:local SITE [:put [system identity get name]]
 
 :local avgRtt
 
