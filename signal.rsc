@@ -1,5 +1,5 @@
-:global METRICSENDPOINT
-:global SITE [:put [system identity get name]]
+:local METRICSENDPOINT
+:local SITE [:put [system identity get name]]
 
 :global ACCESS
 
